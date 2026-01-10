@@ -6,7 +6,7 @@ import { Skill4 } from "./skill-4";
 export const Skill = () => {
   return (
     <div className="bg-white text-black py-8">
-      <div className="container m-auto bg-[#fff2eb] rounded-2xl p-24">
+      <div className="container m-auto bg-[#fff2eb] rounded-2xl p-24 bg-[url('/src/assets/svg/skill-bg.svg')] bg-cover bg-no-repeat">
         <div className="flex flex-col gap-64">
           <Skill1 />
           <Skill2 />
