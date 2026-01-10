@@ -1,9 +1,20 @@
 import Lottie from "lottie-react";
 import data from "@/assets/lottie/Loading.json";
 
-export const SplashScreen = () => {
+interface Props {
+  visible: boolean;
+}
+
+export const SplashScreen = (props: Props) => {
+  const { visible } = props;
   return (
-    <div className="bg-white  text-black">
+    <div
+      className={`bg-white text-black
+      fixed inset-0 z-50
+      transition-all duration-700 ease-in-out
+      ${visible ? "translate-y-0 opacity-100" : "-translate-y-full"}
+    `}
+    >
       <div className="h-screen container m-auto flex flex-col">
         <div className="flex-1" />
         <div className="flex justify-between align-center py-8">

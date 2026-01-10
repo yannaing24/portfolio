@@ -1,0 +1,1 @@
+export const SPLASH_SCREEN_TIME_IN_MS = 4000;

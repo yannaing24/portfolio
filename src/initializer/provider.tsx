@@ -1,5 +1,6 @@
 import { useReducer, useEffect } from "react";
 import { type InitialState, initialState, Context } from "./context";
+import { SPLASH_SCREEN_TIME_IN_MS } from "@/utils/const";
 
 type ProviderProps = {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ export const Provider = ({ children }: ProviderProps) => {
           isInitialized: true,
         },
       });
-    }, 1000);
+    }, SPLASH_SCREEN_TIME_IN_MS);
   };
 
   useEffect(() => {

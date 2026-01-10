@@ -9,12 +9,18 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider>
       <Consumer>
-        {({ isInitialized }) => {
+        {/* {({ isInitialized }) => {
           if (!isInitialized) {
             return <SplashScreen />;
           }
           return <App />;
-        }}
+        }} */}
+        {({ isInitialized }) => (
+          <>
+            <SplashScreen visible={!isInitialized} />
+            {isInitialized && <App />}
+          </>
+        )}
       </Consumer>
     </Provider>
   </StrictMode>
