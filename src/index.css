@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
-body {
-  @apply bg-black text-white;
+/* body {
+  @apply bg-black text-white font-sans;
+  font-optical-sizing: auto;
+} */
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans;
+    font-optical-sizing: auto;
+  }
 }
