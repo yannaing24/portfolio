@@ -1,10 +1,21 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import { Consumer, Provider } from "@/initializer";
+import { SplashScreen } from "./components/splash-screen";
+import App from "@/App";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Provider>
+      <Consumer>
+        {({ isInitialized }) => {
+          if (!isInitialized) {
+            return <SplashScreen />;
+          }
+          return <App />;
+        }}
+      </Consumer>
+    </Provider>
   </StrictMode>
 );

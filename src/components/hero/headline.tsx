@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import data from "@/assets/headline.json";
+import data from "@/assets/lottie/headline.json";
 
 export const Headline = () => {
   return (
