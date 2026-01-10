@@ -1,20 +1,34 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 import data from "@/assets/lottie/skill-1.json";
 
 export const Skill1 = () => {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      lottieRef.current?.play();
-    }, 300);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasPlayed) {
+          lottieRef.current?.play();
+          setHasPlayed(true);
+        }
+      },
+      {
+        threshold: 1,
+      }
+    );
 
-    return () => clearTimeout(timer);
-  }, []);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasPlayed]);
 
   return (
-    <div className="w-3/4 lg:w-3/5">
+    <div ref={containerRef} className="w-3/4 lg:w-3/5">
       <Lottie
         lottieRef={lottieRef}
         animationData={data}
