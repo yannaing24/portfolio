@@ -11,10 +11,8 @@ export default function App() {
         easing: (t) => Math.min(1, 1 - Math.pow(1 - t, 4)),
       }}
     >
-      <div className="container m-auto">
-        <Hero />
-        <Skill />
-      </div>
+      <Hero />
+      <Skill />
     </ReactLenis>
   );
 }
