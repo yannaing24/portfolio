@@ -13,8 +13,6 @@ export default function App() {
     >
       <Hero />
       <Skill />
-      <Hero />
-      <Skill />
     </ReactLenis>
   );
 }
