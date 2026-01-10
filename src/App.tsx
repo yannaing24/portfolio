@@ -1,6 +1,6 @@
 import { ReactLenis } from "lenis/react";
-import { Hero } from "./components/hero";
-import { Skill } from "./components/skill";
+import { Hero } from "@/components/hero";
+import { Skill } from "@/components/skill";
 
 export default function App() {
   return (
@@ -11,8 +11,10 @@ export default function App() {
         easing: (t) => Math.min(1, 1 - Math.pow(1 - t, 4)),
       }}
     >
-      <Hero />
-      <Skill />
+      <div className="container m-auto">
+        <Hero />
+        <Skill />
+      </div>
     </ReactLenis>
   );
 }

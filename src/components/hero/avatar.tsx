@@ -9,5 +9,9 @@ export const Avatar = () => {
     autoplay: true,
   });
 
-  return <RiveComponent />;
+  return (
+    <div className="h-full">
+      <RiveComponent />
+    </div>
+  );
 };
