@@ -1,6 +1,7 @@
 import { ReactLenis } from "lenis/react";
 import { Hero } from "@/components/hero";
 import { Skill } from "@/components/skill";
+import { About1 } from "./components/about-1";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
     >
       <Hero />
       <Skill />
+      <About1 />
     </ReactLenis>
   );
 }
