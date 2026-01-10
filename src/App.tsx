@@ -1,9 +1,13 @@
+import { Hero } from "./components/hero";
+import { Skill } from "./components/skill";
+
 export default function App() {
   return (
     <div>
-      <p className="text-3xl underline font-bold text-red-500 bg-green-500">
-        Hello World
-      </p>
+      <Hero />
+      <Skill />
+      <Hero />
+      <Skill />
     </div>
   );
 }
