@@ -3,7 +3,8 @@ import { ReactLenis, type LenisRef } from "lenis/react";
 import { frame, cancelFrame } from "motion";
 import { Hero } from "@/components/hero";
 import { Skill } from "@/components/skill";
-import { About1 } from "./components/about-1";
+import { About1 } from "@/components/about-1";
+import { Project } from "@/components/project";
 
 export default function App() {
   const lenisRef = useRef<LenisRef>(null)
@@ -31,6 +32,10 @@ export default function App() {
       <Hero />
       <Skill />
       <About1 />
+      <Project />
+      <div className="bg-orange-500 text-red h-screen flex flex-col justify-center">
+        Next Section
+      </div>
     </ReactLenis>
   );
 }
