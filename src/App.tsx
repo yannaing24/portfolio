@@ -33,9 +33,9 @@ export default function App() {
       <Skill />
       <About1 />
       <Project />
-      <div className="bg-orange-500 text-red h-screen flex flex-col justify-center">
+      {/* <div className="bg-orange-500 text-red h-screen flex flex-col justify-center">
         Next Section
-      </div>
+      </div> */}
     </ReactLenis>
   );
 }
