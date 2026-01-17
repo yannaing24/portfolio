@@ -30,7 +30,7 @@ export const About1 = () => {
   return (
     <div
       ref={containerRef}
-      className="h-screen flex flex-col justify-center bg-blue-500"
+      className="py-24 flex flex-col justify-center bg-blue-500"
     >
       <div className="w-3/4 lg:w-2/5 m-auto">
         <Lottie
