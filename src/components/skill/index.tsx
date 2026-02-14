@@ -7,33 +7,35 @@ import { Skill3 } from "./skill-3";
 import { Skill4 } from "./skill-4";
 
 export const Skill = () => {
-  const container = useRef(null)
+  const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
+    offset: ["start start", "end end"],
   });
-  const scale = useTransform(scrollYProgress, [0.72, 1], [0, 6]);
-  
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0, 6]);
+
   return (
-   <div className="bg-white text-black relative" ref={container}>
-     <div className="pt-8">
-      <div className="container m-auto bg-[#fff2eb] rounded-2xl p-24 pb-260 bg-[url('/src/assets/svg/skill-bg.svg')] bg-cover bg-no-repeat">
-        <div className="flex flex-col gap-64">
-          <Skill1 />
-          <Skill2 />
-          <Skill3 />
-          <Skill4 />
+    <div>
+      <div className="flex flex-col gap-64 mb-64 p-24">
+        <Skill1 />
+        <Skill2 />
+        <Skill3 />
+      </div>
+      <div className="h-[150vh] relative" ref={container}>
+        <div className="h-screen sticky top-0">
+          <div className="px-24">
+            <Skill4 />
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <motion.div
+              style={{ scale }}
+              className="absolute bottom-[-10%] z-0 origin-bottom"
+            >
+              <AboutIntroSvg />
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
-    <motion.div className="absolute bottom-0 left-0 right-0 flex justify-center" style={{
-      scale,
-      transformOrigin: "50% 100%", 
-
-    }}>
-      <AboutIntroSvg style={{
-        height: 'auto'
-      }}/>
-    </motion.div>
-   </div>
   );
 };
