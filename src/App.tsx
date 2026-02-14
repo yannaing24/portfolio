@@ -6,20 +6,21 @@ import { Skill } from "@/components/skill";
 import { About1 } from "@/components/about-1";
 import { Project } from "@/components/project";
 import { Review } from "./components/review";
+import { Experience } from "./components/experience";
 
 export default function App() {
-  const lenisRef = useRef<LenisRef>(null)
+  const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {
     function update(data: { timestamp: number }) {
-      const time = data.timestamp
-      lenisRef.current?.lenis?.raf(time)
+      const time = data.timestamp;
+      lenisRef.current?.lenis?.raf(time);
     }
 
-    frame.update(update, true)
+    frame.update(update, true);
 
-    return () => cancelFrame(update)
-  }, [])
+    return () => cancelFrame(update);
+  }, []);
 
   return (
     <ReactLenis
@@ -35,6 +36,7 @@ export default function App() {
       <About1 />
       <Project />
       <Review />
+      <Experience />
     </ReactLenis>
   );
 }
