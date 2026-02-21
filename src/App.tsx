@@ -32,13 +32,15 @@ export default function App() {
       }}
       ref={lenisRef}
     >
-      <Hero />
-      <Skill />
-      <About />
-      <Project />
-      <Review />
-      <Experience />
-      <Footer />
+      <div className="overflow-x-clip">
+        <Hero />
+        <Skill />
+        <About />
+        <Project />
+        <Review />
+        <Experience />
+        <Footer />
+      </div>
     </ReactLenis>
   );
 }
