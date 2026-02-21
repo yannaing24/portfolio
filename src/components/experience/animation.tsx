@@ -38,9 +38,30 @@ export const Animation = () => {
           />
 
           <div className="text-xl font-semibold p-12">
-            {frame <= 214 && "Introduction section"}
-            {frame > 214 && frame <= 408 && "Middle section"}
-            {frame > 408 && "Final section"}
+            {frame <= 214 && (
+              <p>
+                FIRST Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Iusto possimus dolore vero aut illo, eveniet quisquam rerum
+              </p>
+            )}
+            {frame > 214 && frame <= 408 && (
+              <p>
+                SECOND Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Iusto possimus dolore vero aut illo, eveniet quisquam rerum
+              </p>
+            )}
+            {frame > 408 && frame <= 599 && (
+              <p>
+                THIRD Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Iusto possimus dolore vero aut illo, eveniet quisquam rerum
+              </p>
+            )}
+            {frame > 599 && (
+              <p>
+                FOURTH Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Iusto possimus dolore vero aut illo, eveniet quisquam rerum
+              </p>
+            )}
           </div>
         </div>
       </div>
