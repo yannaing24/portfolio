@@ -7,6 +7,7 @@ import { About } from "@/components/about";
 import { Project } from "@/components/project";
 import { Review } from "./components/review";
 import { Experience } from "./components/experience";
+import { Footer } from "./components/footer";
 
 export default function App() {
   const lenisRef = useRef<LenisRef>(null);
@@ -37,6 +38,7 @@ export default function App() {
       <Project />
       <Review />
       <Experience />
+      <Footer />
     </ReactLenis>
   );
 }
