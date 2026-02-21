@@ -4,7 +4,7 @@ export const Avatar = () => {
   const STATE_MACHINE_NAME = "State Machine 1";
 
   const { RiveComponent } = useRive({
-    src: "/src/assets/rive/avatar.riv",
+    src: "/avatar.riv",
     stateMachines: STATE_MACHINE_NAME,
     autoplay: true,
   });
