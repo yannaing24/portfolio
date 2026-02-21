@@ -28,7 +28,7 @@ export const Header = () => {
   }, [hasPlayed]);
 
   return (
-    <div ref={containerRef} className="p-15 w-3/4 lg:w-3/5">
+    <div ref={containerRef} className="p-15 w-3/4 lg:w-3/5 h-1">
       <Lottie
         lottieRef={lottieRef}
         animationData={data}
