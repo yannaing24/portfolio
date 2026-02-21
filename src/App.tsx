@@ -3,7 +3,7 @@ import { ReactLenis, type LenisRef } from "lenis/react";
 import { frame, cancelFrame } from "motion";
 import { Hero } from "@/components/hero";
 import { Skill } from "@/components/skill";
-import { About1 } from "@/components/about-1";
+import { About } from "@/components/about";
 import { Project } from "@/components/project";
 import { Review } from "./components/review";
 import { Experience } from "./components/experience";
@@ -33,7 +33,7 @@ export default function App() {
     >
       <Hero />
       <Skill />
-      <About1 />
+      <About />
       <Project />
       <Review />
       <Experience />

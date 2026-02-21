@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 import data from "@/assets/lottie/about-1.json";
 
-export const About1 = () => {
+export const About = () => {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [hasPlayed, setHasPlayed] = useState(false);
@@ -17,7 +17,7 @@ export const About1 = () => {
       },
       {
         threshold: 0.2,
-      }
+      },
     );
 
     if (containerRef.current) {

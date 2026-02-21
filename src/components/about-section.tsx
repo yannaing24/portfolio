@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import AboutIntro from "@/assets/svg/about-intro.svg?react";
-import { About1 } from "@/components/about-1";
+import { About1 } from "@/components/about";
 
 export const AboutIntroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,7 +21,7 @@ export const AboutIntroSection = () => {
       },
       {
         threshold: 0.3, // 👈 trigger when 30% visible
-      }
+      },
     );
 
     if (containerRef.current) observer.observe(containerRef.current);
