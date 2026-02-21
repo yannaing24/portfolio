@@ -28,13 +28,15 @@ export const Headline = () => {
   }, [hasPlayed]);
 
   return (
-    <div ref={containerRef}>
-      <Lottie
-        lottieRef={lottieRef}
-        animationData={data}
-        loop={false}
-        autoplay={false}
-      />
+    <div className="h-screen flex justify-center items-center bg-[url(/src/assets/footer-bg.png)] bg-cover bg-center rounded-bl-[120px] rounded-br-[120px]">
+      <div ref={containerRef}>
+        <Lottie
+          lottieRef={lottieRef}
+          animationData={data}
+          loop={false}
+          autoplay={false}
+        />
+      </div>
     </div>
   );
 };

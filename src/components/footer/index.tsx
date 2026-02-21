@@ -1,9 +1,11 @@
 import { Headline } from "./headline";
+import { Navigation } from "./navigation";
 
 export const Footer = () => {
   return (
-    <div className="h-screen flex justify-center items-center bg-[url(/src/assets/footer-bg.png)] bg-cover bg-center">
+    <div className="bg-[#199C8A]">
       <Headline />
+      <Navigation />
     </div>
   );
 };

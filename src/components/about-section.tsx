@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import AboutIntro from "@/assets/svg/about-intro.svg?react";
-import { About1 } from "@/components/about";
+import { About } from "@/components/about";
 
 export const AboutIntroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -53,7 +53,7 @@ export const AboutIntroSection = () => {
           }
         `}
       >
-        {showContent && <About1 />}
+        {showContent && <About />}
       </div>
     </section>
   );
