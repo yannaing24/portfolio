@@ -21,7 +21,7 @@ export const Skill = () => {
         <Skill2 />
         <Skill3 />
       </div>
-      <div className="h-[400vh] relative" ref={container}>
+      <div className="h-[320vh] relative" ref={container}>
         <div className="h-screen sticky top-0">
           <div className="px-24">
             <Skill4 />
